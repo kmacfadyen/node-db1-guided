@@ -31,6 +31,7 @@ router.post('/', checkPayload, async (req, res, next) => {
   }
 })
 
+
 router.put('/:id', checkPayload, checkId, async (req, res, next) => {
   try {
     const data = await Shipper.update(req.params.id, req.body)
